@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,700');
+
+/* BASE STYLES */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    color: #414a4e;
+    font-family: Lato;
+    line-height: 1.5;
+    background: #eceff1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+    margin: 0;
+    font-family: 'Lato';
+}
+
+h2,
+h5 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3,
+h4 {
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+section h2 {
+    border-bottom: 0;
+    letter-spacing: 0;
+    /* margin: 65px 0 24px; */
+    padding-bottom: 0;
+    font-weight: 700;
+}
+
+section:target:before {
+    content: '';
+    display: block;
+    height: 1px;
+}
+
+pre {
+    margin: 5px 0;
+    padding-left: 5px;
+    background: #f7f7f7;
+}
+
+#header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    background: #FFF;
+    color: #414a4e;
+    line-height: 60px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px;
+    z-index: 9;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+}
+
+#header .esquerdo{
+    display: flex;
+    align-items: center;
+}
+
+#header .nome {
+    display: none;
+    margin-left: 20px;
+}
+
+#navbar {
+    font-size: 13px;
+    background: #fff;
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
+    top: 60px;
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+
+
+}
+
+#navbar::-webkit-scrollbar { width: 8px; background:#f1f1f1; } /* configurando scroll */
+#navbar::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
+#navbar::-webkit-scrollbar-thumb { border-radius:10px; background:#888888;  }
+
+#navbar.nav-menu-abre {
+    display: block;
+}
+
+.navbar-icon {
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.navbar-icon.fechar {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.nav-link li,
+.nav-link a li {
+    font-size: 1.2em;
+    color: #606770;
+    padding: 10px;
+}
+.nav-link a li {
+    font-size: 1em;
+    color: #606770;
+    padding: 10px;
+}
+
+
+.nav-link li:hover {
+    background: rgba(0, 0, 0, .05);
+}
+
+#navbar ul {
+    padding: 0;
+    line-height: 16px;
+}
+
+#navbar li,
+#navbar li div{
+    list-style: none;
+    margin-top: 8px;
+    line-height: 16px;
+    color: #212121;
+    cursor: pointer;
+}
+
+#navbar li.recuo {
+    list-style: none;
+    margin-top: 8px;
+    line-height: 16px;
+    margin-left: 20px;
+    color: #212121;
+}
+
+#navbar a {
+    text-decoration: none;
+}
+
+
+#main-doc {
+    margin-top: 80px;
+    padding: 0 20px 50px 20px;
+}
+
+
+ul li {
+    list-style: none;
+    margin-top: 5px;
+}
+
+.ativo{
+    color: #6b52ae;
+    background: rgba(0, 0, 0, .05);
+}
+
+.sessao{
+    display: none;
+}
+.sessao:first-of-type {
+    display: block;
+}
+
+.busca {
+    text-decoration: none;
+    color: #414a4e;
+}
+
+.busca section {
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.busca section:hover{
+    background: #fff;
+}
+
+.linha {
+    background: #414a4e;
+    height: 1px;
+    margin: 10px 0px;
+}
+
+.sessao img{
+    margin: 10px auto;
+}
+
+
+@media (min-width: 320px) {
+    #header .nome {
+        display: block;
+    }
+}
+
+@media (max-width: 400px) {
+    #header .nome {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+
+    #navbar {
+        display: block;
+        width: 230px;
+        max-height: 100vh;
+        height: 100%;
+    }
+
+    #main-doc {
+        /* position: absolute;
+        left: 230px; */
+        /*navbar width*/
+        margin-top: 80px;
+        margin-left:230px;
+    }
+
+    .navbar-icon {
+        display: none;
+    }
+}
+
+
+.pesquisa-container {
+    width: 200px;
+    display: block;
+}
+
+input#pesquisa-bar {
+    margin: 0 auto;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 1rem;
+    background-color: #ebedf0;
+    border: 1px solid #D0CFCE;
+    color: #444950;
+    border-radius: 3px;
+    outline: none;
+}
+
+input#pesquisa-bar:focus {
+    border: 1px solid #6b52ae;
+    transition: 0.35s ease;
+    color: #444950;
+}
+
+input#pesquisa-bar:focus::-webkit-input-placeholder {
+    transition: opacity 0.45s ease;
+    opacity: 0;
+}
+
+input#pesquisa-bar:focus::-moz-placeholder {
+    transition: opacity 0.45s ease;
+    opacity: 0;
+}
+
+input#pesquisa-bar:focus:-ms-placeholder {
+    transition: opacity 0.45s ease;
+    opacity: 0;
+}
+
+.pesquisa-icon {    
+    width: 35px;
+    height: 35px;
+    position: relative;
+    float: right;
+    top: -47px;
+    right: 2px;
+    background: #ebedf0;
+}

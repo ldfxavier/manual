@@ -1,0 +1,9 @@
+/arquivos
+/files
+.DS_Store
+._*
+.ftp*
+.versao
+/.vscode
+package-lock.json
+/node_modules
