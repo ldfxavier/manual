@@ -44,7 +44,7 @@
 
 	<fieldset>
 		<div class="legenda">IMAGEM PRINCIPAL</div>
-		<?= Form::imagem('ENVIAR IMAGEM PRINCIPAL <span>(Será redirecionada para 650px)</span>', 'imagem', P::r($r, 'imagem->valor'), 'noticias', 'jpg/jpeg/png', 650, '30000', 'redimencionar', 'img');?>
+		<?= Form::imagem('ENVIAR IMAGEM PRINCIPAL <span>(Será redirecionada para 650px)</span>', 'imagem', P::r($r, 'imagem->valor'), 'topicos', 'jpg/jpeg/png', 650, '30000', 'redimencionar', 'img');?>
 	</fieldset>
 
 	<fieldset>
