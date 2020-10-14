@@ -195,7 +195,7 @@ $(function(){
         }else if(resposta.erro == false){
             $('.lista', bloco).removeClass('hide');
             $('.lista a.download').attr('href', resposta.link);
-            $('.lista input').val(resposta.arquivo);
+            $('.lista .input_arquivo').val(resposta.arquivo);
         }
         $('.botao input', bloco).val('');
         $.loading('hide');

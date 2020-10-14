@@ -2886,7 +2886,7 @@ $(function(){
         }else if(resposta.erro == false){
             $('.lista', bloco).removeClass('hide');
             $('.lista a.download').attr('href', resposta.link);
-            $('.lista input').val(resposta.arquivo);
+            $('.lista .input_arquivo').val(resposta.arquivo);
         }
         $('.botao input', bloco).val('');
         $.loading('hide');
@@ -3492,15 +3492,11 @@ $(function(){
 			}else {
                 var valor;
                 if(falso == true){
-    				      if($(this).attr('data-editor') == 1) valor = tinyMCE.get(nome).getContent();
-                  else valor = $(this).val();
-    				      if($(this).attr('data-ckeditor') == 1) valor = CKEDITOR.instances.editor_texto.getData();
-                  else valor = $(this).val();
+    				if($(this).attr('data-editor') == 1) valor = tinyMCE.get(nome).getContent();
+                    else valor = $(this).val();
     				dados[nome] = valor;
                 }else if(false == false && $(this).attr('data-falso') == undefined){
                     if($(this).attr('data-editor') == 1) valor = tinyMCE.get(nome).getContent();
-                    else valor = $(this).val();
-                    if($(this).attr('data-ckeditor') == 1) valor = CKEDITOR.instances.editor_texto.getData();
                     else valor = $(this).val();
     				dados[nome] = valor;
                 }
@@ -3553,8 +3549,9 @@ $(function(){
 		var link = form.attr('action');
 		var volta = $('#form_volta_geral').val();
 		var historico = $(this).attr('data-historico') || 1;
-    var booleano = $(this).attr('data-booleano') || '';
-    var dados = form_dados(form);
+		var booleano = $(this).attr('data-booleano') || '';
+
+        var dados = form_dados(form);
 
 		if(SISTEMA == 'producao'){
             $.loading('show');
@@ -4872,8 +4869,4 @@ $(function(){
         return false;
     });
 
-});
-CKEDITOR.replace("editor_texto", {
-  height: 300,
-  filebrowserUploadUrl: $('#PAINEL').val() + "/upload"
 });

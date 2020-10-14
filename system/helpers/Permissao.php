@@ -48,6 +48,19 @@ class Permissao
 				'per_categorias_deletar' => 'Deletar'
 			)
 		),
+		'drive' => array(
+			'titulo' => 'Drive',
+			'tabela' => 'drive',
+			'model' => 'DriveModel',
+			'permissao' => 'per_drive',
+			'lista' => array(
+				'per_drive_visualizar' => 'Visualizar lista',
+				'per_drive_detalhe' => 'Detalhe do drive',
+				'per_drive_add' => 'Adicionar drive',
+				'per_drive_editar' => 'Editar drive',
+				'per_drive_deletar' => 'Deletar drive'
+			)
+		),
 		// 'administrativo_status' => array(
 		// 	'titulo' => 'Status',
 		// 	'tabela' => 'status_novo',

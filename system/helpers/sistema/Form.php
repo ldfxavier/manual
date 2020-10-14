@@ -274,7 +274,7 @@
 					<div class="lista '.$display.'">
 						<a class="download" download="download_arquivo" href="'.ARQUIVO.'/'.$diretorio.'/'.$valor.'" data-ajuda="Download do arquivo"><i data-font="&#xf0ed;"></i></a>
 						<a class="deletar" href="#deletar" data-ajuda="Deletar arquivo"><i data-font="&#xe808;"></i></a>
-						<input type="hidden" '.$nome.' value="'.$valor.'" />
+						<input class="input_arquivo" type="hidden" '.$nome.' value="'.$valor.'" />
 					</div>
 				</div>
 			';

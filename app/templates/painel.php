@@ -63,6 +63,9 @@ $equipe = $_SESSION['EQUIPE'];
 					Menu::principal('ADMINISTRATIVO', $_app, '#FF99FF', array(
 						// array('Status', 'administrativo_status', 0, true),
 					));
+					Menu::principal('DRIVE', $_app, '#4AA9E9', array(
+						array('DRIVE', 'drive', 0)
+					));
 					?>
 				</ul>
 
